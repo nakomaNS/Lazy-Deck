@@ -1,334 +1,307 @@
-/* --- JANELA TRANSPARENTE E FONTE --- */
 .root {
-    -fx-font-family: 'Segoe UI', sans-serif;
-    -fx-background-color: transparent; /* Fundamental para remover o branco do windows */
+  -fx-font-family: "Segoe UI", sans-serif;
+  -fx-background-color: transparent;
 }
 
-/* O Container Principal Arredondado */
 .main-container {
-    -fx-background-color: radial-gradient(focus-distance 0%, center 50% 50%, radius 80%, #1a1f29, #0f1219);
-    -fx-background-radius: 20; /* Arredonda a janela inteira */
-    -fx-border-color: rgba(255, 255, 255, 0.1);
-    -fx-border-radius: 20;
-    -fx-border-width: 1;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 20, 0, 0, 0);
+  -fx-background-color: radial-gradient(
+    focus-distance 0%,
+    center 50% 50%,
+    radius 80%,
+    #1a1f29,
+    #0f1219
+  );
+  -fx-background-radius: 20;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-border-radius: 20;
+  -fx-border-width: 1;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
 }
 
-/* --- SIDEBAR CORRIGIDA --- */
 .sidebar {
-    -fx-background-color: linear-gradient(to bottom, rgba(30, 35, 45, 0.6), rgba(20, 20, 30, 0.8));
-    -fx-background-radius: 20 0 0 20; /* Arredonda só a esquerda para casar com a janela */
-    -fx-border-color: rgba(255, 255, 255, 0.05);
-    -fx-border-width: 0 1 0 0;
-    -fx-padding: 30 20;
+  -fx-background-color: linear-gradient(
+    to bottom,
+    rgba(30, 35, 45, 0.6),
+    rgba(20, 20, 30, 0.8)
+  );
+  -fx-background-radius: 20 0 0 20;
+  -fx-border-color: rgba(255, 255, 255, 0.05);
+  -fx-border-width: 0 1 0 0;
+  -fx-padding: 30 20;
 }
 
-/* Avatar */
 .user-avatar {
-    -fx-effect: dropshadow(gaussian, rgba(0, 239, 255, 0.5), 15, 0, 0, 0);
-    -fx-stroke: rgba(0, 239, 255, 0.8);
-    -fx-stroke-width: 2;
+  -fx-effect: dropshadow(gaussian, rgba(0, 239, 255, 0.5), 15, 0, 0, 0);
+  -fx-stroke: rgba(0, 239, 255, 0.8);
+  -fx-stroke-width: 2;
 }
 
 .user-name {
-    -fx-text-fill: white;
-    -fx-font-size: 16px; /* Ajustado */
-    -fx-font-weight: bold;
-    -fx-padding: 10 0 0 0;
-    -fx-alignment: center;
-    -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0); /* Sombra pro texto ler melhor */
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-padding: 10 0 0 0;
+  -fx-alignment: center;
+  -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0);
 }
 
-/* Badge Nível */
 .level-badge {
-    -fx-background-color: #ff0055;
-    -fx-background-radius: 10;
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-font-size: 11px;
-    -fx-padding: 2 8;
+  -fx-background-color: #ff0055;
+  -fx-background-radius: 10;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-size: 11px;
+  -fx-padding: 2 8;
 }
 
-/* --- BOTÕES DA JANELA (Fechar/Minimizar) --- */
 .window-btn {
-    -fx-background-color: transparent;
-    -fx-text-fill: #8b949e;
-    -fx-font-weight: bold;
-    -fx-font-size: 14px;
-    -fx-cursor: hand;
-    -fx-padding: 5 10;
+  -fx-background-color: transparent;
+  -fx-text-fill: #8b949e;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+  -fx-cursor: hand;
+  -fx-padding: 5 10;
 }
 .window-btn:hover {
-    -fx-text-fill: white;
-    -fx-background-color: rgba(255,255,255,0.1);
-    -fx-background-radius: 5;
+  -fx-text-fill: white;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-background-radius: 5;
 }
 .window-btn-close:hover {
-    -fx-background-color: #da3633; /* Vermelho ao fechar */
+  -fx-background-color: #da3633;
 }
 
-/* --- CARD COMPACTO (180x270) --- */
 .game-card {
-    -fx-background-color: #000;
-    -fx-background-radius: 12;
-    -fx-border-radius: 12;
-    -fx-border-color: rgba(255,255,255,0.1);
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);
+  -fx-background-color: #000;
+  -fx-background-radius: 12;
+  -fx-border-radius: 12;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
 }
 
-/* Overlay do Card */
 .card-overlay {
-    -fx-background-color: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
-    -fx-background-radius: 0 0 12 12; /* Só embaixo */
+  -fx-background-color: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
+  -fx-background-radius: 0 0 12 12;
 }
 
-/* --- DECK STATS (Topo Direito) --- */
 .deck-stats-container {
-    -fx-background-color: rgba(0, 0, 0, 0.4);
-    -fx-background-radius: 20;
-    -fx-border-color: rgba(255, 255, 255, 0.1);
-    -fx-border-radius: 20;
-    -fx-padding: 5 15;
+  -fx-background-color: rgba(0, 0, 0, 0.4);
+  -fx-background-radius: 20;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-border-radius: 20;
+  -fx-padding: 5 15;
 }
 
 .deck-icon {
-    -fx-fill: #00efff;
+  -fx-fill: #00efff;
 }
 
-/* Mantendo os botões antigos... */
 .button-farm-all {
-    -fx-background-color: linear-gradient(to right, #00efff, #0077ff);
-    -fx-text-fill: #001122;
-    -fx-font-weight: 900;
-    -fx-font-size: 13px;
-    -fx-background-radius: 8;
-    -fx-cursor: hand;
-    -fx-padding: 10 15;
+  -fx-background-color: linear-gradient(to right, #00efff, #0077ff);
+  -fx-text-fill: #001122;
+  -fx-font-weight: 900;
+  -fx-font-size: 13px;
+  -fx-background-radius: 8;
+  -fx-cursor: hand;
+  -fx-padding: 10 15;
 }
 .button-scan {
-    -fx-background-color: transparent;
-    -fx-text-fill: #5c6675;
-    -fx-border-color: #3c4450;
-    -fx-border-radius: 8;
-    -fx-cursor: hand;
-    -fx-padding: 8 15;
+  -fx-background-color: transparent;
+  -fx-text-fill: #5c6675;
+  -fx-border-color: #3c4450;
+  -fx-border-radius: 8;
+  -fx-cursor: hand;
+  -fx-padding: 8 15;
 }
 
-/* --- BARRA DE ROLAGEM CUSTOMIZADA --- */
 .scroll-bar:vertical {
-    -fx-background-color: transparent;
-    -fx-pref-width: 12; /* Largura fina */
+  -fx-background-color: transparent;
+  -fx-pref-width: 12;
 }
 
 .scroll-bar:vertical .track {
-    -fx-background-color: rgba(0, 0, 0, 0.3); /* Fundo do trilho escuro sutil */
-    -fx-background-radius: 10;
-    -fx-border-radius: 10;
+  -fx-background-color: rgba(0, 0, 0, 0.3);
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
 }
 
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #3c4450; /* Cor da barra */
-    -fx-background-radius: 10;
-    -fx-background-insets: 2; /* Margem interna para parecer flutuante */
+  -fx-background-color: #3c4450;
+  -fx-background-radius: 10;
+  -fx-background-insets: 2;
 }
 
 .scroll-bar:vertical .thumb:hover {
-    -fx-background-color: #00efff; /* Brilha Ciano ao passar o mouse */
+  -fx-background-color: #00efff;
 }
 
-/* Remove as setinhas pra cima e pra baixo (ninguém usa) */
-.scroll-bar .increment-button, .scroll-bar .decrement-button {
-    -fx-background-color: transparent;
-    -fx-padding: 0;
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+  -fx-background-color: transparent;
+  -fx-padding: 0;
 }
-.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
-    -fx-padding: 0;
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+  -fx-padding: 0;
 }
-
-/* --- CHECKBOX PADRÃO LIMPO (style.css) --- */
 
 .custom-checkbox {
-    -fx-text-fill: #8b949e;
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-    
-    /* 1. Alinhamento vertical perfeito */
-    -fx-alignment: center-left; 
-    
-    /* 2. Afasta o texto da caixa */
-    -fx-label-padding: 0 0 0 8; 
+  -fx-text-fill: #8b949e;
+  -fx-font-size: 13px;
+  -fx-font-weight: bold;
+  -fx-cursor: hand;
+
+  -fx-alignment: center-left;
+
+  -fx-label-padding: 0 0 0 8;
 }
 
 .custom-checkbox:hover {
-    -fx-text-fill: white;
+  -fx-text-fill: white;
 }
 
-/* A CAIXA (Container do Check) */
 .custom-checkbox .box {
-    -fx-background-color: #0d1117;
-    -fx-border-color: #30363d;
-    -fx-border-width: 1px;
-    -fx-border-radius: 3px; /* Arredondamento sutil padrão */
-    
-    /* 3. TAMANHO FIXO PADRÃO */
-    -fx-min-width: 16px;
-    -fx-min-height: 16px;
-    -fx-max-width: 16px;
-    -fx-max-height: 16px;
-    
-    /* 4. O SEGREDO: Esse padding empurra o check pra dentro.
-       Quanto maior esse número, menor o check fica. 
-       2px ou 3px é o ideal para centralizar sem encostar. */
-    -fx-padding: 3px; 
+  -fx-background-color: #0d1117;
+  -fx-border-color: #30363d;
+  -fx-border-width: 1px;
+  -fx-border-radius: 3px;
+
+  -fx-min-width: 16px;
+  -fx-min-height: 16px;
+  -fx-max-width: 16px;
+  -fx-max-height: 16px;
+
+  -fx-padding: 3px;
 }
 
-/* Hover na Caixa */
 .custom-checkbox:hover .box {
-    -fx-border-color: #8b949e;
+  -fx-border-color: #8b949e;
 }
 
-/* O ÍCONE (O sinal de V) */
 .custom-checkbox:selected .mark {
-    -fx-background-color: #001122; /* Cor do ícone */
-    -fx-shape: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z";
-    /* Sem hacks de tamanho aqui, o padding da .box controla isso */
+  -fx-background-color: #001122;
+  -fx-shape: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z";
 }
 
-/* Quando selecionado (Fundo da caixa) */
 .custom-checkbox:selected .box {
-    -fx-background-color: #00efff;
-    -fx-border-color: #00efff;
+  -fx-background-color: #00efff;
+  -fx-border-color: #00efff;
 }
 
 .tray-menu-container {
-    -fx-background-color: #161b22;
-    -fx-border-color: rgba(255, 255, 255, 0.1);
-    -fx-border-width: 1;
-    -fx-border-radius: 8;
-    -fx-background-radius: 8;
-    -fx-padding: 6;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 4);
+  -fx-background-color: #161b22;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-padding: 6;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 10, 0, 0, 4);
 }
 
 .tray-menu-item {
-    -fx-background-color: transparent;
-    -fx-text-fill: #c9d1d9; /* Cinza claro */
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-    -fx-alignment: center-left;
-    -fx-padding: 8 12;
-    -fx-cursor: hand;
-    -fx-background-radius: 6;
+  -fx-background-color: transparent;
+  -fx-text-fill: #c9d1d9;
+  -fx-font-size: 13px;
+  -fx-font-weight: bold;
+  -fx-alignment: center-left;
+  -fx-padding: 8 12;
+  -fx-cursor: hand;
+  -fx-background-radius: 6;
 }
 
 .tray-menu-item:hover {
-    -fx-background-color: #00efff; /* Ciano Neon */
-    -fx-text-fill: #0d1117;        /* Texto escuro pra contraste */
+  -fx-background-color: #00efff;
+  -fx-text-fill: #0d1117;
 }
 
-/* Separador visual */
 .tray-separator {
-    -fx-background-color: rgba(255, 255, 255, 0.1);
-    -fx-min-height: 1;
-    -fx-max-height: 1;
-    -fx-margin: 4 0;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-min-height: 1;
+  -fx-max-height: 1;
+  -fx-margin: 4 0;
 }
 
-/* Espaçamento extra para evitar colisão com barra de título */
 .top-bar-container {
-    -fx-padding: 65 50 35 50; /* Top, Right, Bottom, Left */
+  -fx-padding: 65 50 35 50;
 }
 
-/* --- JANELA DE ALERTA GLASSMORPHISM (CORRIGIDO) --- */
-
-/* 1. Remove o fundo branco padrão do JavaFX que causa os cantos quadrados */
 .dialog-pane {
-    -fx-background-color: transparent; 
+  -fx-background-color: transparent;
 }
 
-/* 2. O Container Estilizado (Nossa Janela Real) */
 .glass-dialog {
-    /* Fundo Escuro Fosco */
-    -fx-background-color: linear-gradient(to bottom right, #161b22, #0d1117);
-    -fx-background-radius: 18;
-    -fx-border-radius: 18;
-    
-    /* Borda Sutil */
-    -fx-border-color: rgba(255, 255, 255, 0.15);
-    -fx-border-width: 1;
-    
-    /* Sombra suave e profunda em vez de brilho estourado */
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.9), 60, 0, 0, 15);
-    
-    -fx-padding: 25;
-    -fx-max-width: 420;
+  -fx-background-color: linear-gradient(to bottom right, #161b22, #0d1117);
+  -fx-background-radius: 18;
+  -fx-border-radius: 18;
+
+  -fx-border-color: rgba(255, 255, 255, 0.15);
+  -fx-border-width: 1;
+
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.9), 60, 0, 0, 15);
+
+  -fx-padding: 25;
+  -fx-max-width: 420;
 }
 
-/* Cabeçalho */
 .glass-dialog .header-panel {
-    -fx-background-color: transparent;
-    -fx-padding: 0 0 10 0;
+  -fx-background-color: transparent;
+  -fx-padding: 0 0 10 0;
 }
 
 .glass-dialog .header-panel .label {
-    -fx-text-fill: #ffcc00; /* Amarelo Ouro */
-    -fx-font-size: 18px;
-    -fx-font-weight: 900;
-    -fx-font-family: 'Segoe UI';
-    /* Sombra no texto para leitura */
-    -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0);
+  -fx-text-fill: #ffcc00;
+  -fx-font-size: 18px;
+  -fx-font-weight: 900;
+  -fx-font-family: "Segoe UI";
+  -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0);
 }
 
-/* Corpo do Texto (Ajustado para Legibilidade) */
 .glass-dialog .content .label {
-    -fx-text-fill: #f0f6fc; /* Branco Gelo (Muito mais claro) */
-    -fx-font-size: 14px;
-    -fx-font-family: 'Segoe UI';
-    -fx-wrap-text: true;
-    -fx-line-spacing: 4px; /* Espaçamento entre linhas para ler melhor */
-    -fx-padding: 10 0 20 0;
-    -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0);
+  -fx-text-fill: #f0f6fc;
+  -fx-font-size: 14px;
+  -fx-font-family: "Segoe UI";
+  -fx-wrap-text: true;
+  -fx-line-spacing: 4px;
+  -fx-padding: 10 0 20 0;
+  -fx-effect: dropshadow(gaussian, black, 2, 1, 0, 0);
 }
 
-/* Barra de Botões */
 .glass-dialog .button-bar {
-    -fx-padding: 15 0 0 0;
+  -fx-padding: 15 0 0 0;
 }
 
-/* Botões Gerais */
 .glass-dialog .button-bar .button {
-    -fx-background-radius: 8;
-    -fx-font-weight: bold;
-    -fx-font-size: 13px;
-    -fx-cursor: hand;
-    -fx-padding: 10 25;
+  -fx-background-radius: 8;
+  -fx-font-weight: bold;
+  -fx-font-size: 13px;
+  -fx-cursor: hand;
+  -fx-padding: 10 25;
 }
 
-/* Botão CANCELAR (Discreto) */
 .glass-dialog .button-bar .button:cancel {
-    -fx-background-color: rgba(255, 255, 255, 0.05);
-    -fx-text-fill: #8b949e; /* Cinza médio */
-    -fx-border-color: rgba(255, 255, 255, 0.1);
-    -fx-border-radius: 8;
+  -fx-background-color: rgba(255, 255, 255, 0.05);
+  -fx-text-fill: #8b949e;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-border-radius: 8;
 }
 .glass-dialog .button-bar .button:cancel:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.15);
-    -fx-text-fill: white;
+  -fx-background-color: rgba(255, 255, 255, 0.15);
+  -fx-text-fill: white;
 }
 
-/* Botão CONTINUAR (Azul Tech Sóbrio) */
-/* Mudamos do Ciano Neon para um Azul Profundo mais elegante */
 .glass-dialog .button-bar .button:default {
-    -fx-background-color: linear-gradient(to bottom, #2188ff, #005cc5);
-    -fx-text-fill: white;
-    -fx-border-color: rgba(255,255,255,0.1);
-    -fx-border-radius: 8;
-    /* Brilho reduzido */
-    -fx-effect: dropshadow(three-pass-box, rgba(33, 136, 255, 0.4), 10, 0, 0, 4);
+  -fx-background-color: linear-gradient(to bottom, #2188ff, #005cc5);
+  -fx-text-fill: white;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-border-radius: 8;
+  -fx-effect: dropshadow(three-pass-box, rgba(33, 136, 255, 0.4), 10, 0, 0, 4);
 }
 .glass-dialog .button-bar .button:default:hover {
-    -fx-background-color: linear-gradient(to bottom, #449dff, #1a74d8);
-    -fx-effect: dropshadow(three-pass-box, rgba(33, 136, 255, 0.6), 15, 0, 0, 4);
+  -fx-background-color: linear-gradient(to bottom, #449dff, #1a74d8);
+  -fx-effect: dropshadow(three-pass-box, rgba(33, 136, 255, 0.6), 15, 0, 0, 4);
 }
-
